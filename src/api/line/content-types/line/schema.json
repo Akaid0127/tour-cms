@@ -1,0 +1,60 @@
+{
+  "kind": "collectionType",
+  "collectionName": "lines",
+  "info": {
+    "singularName": "line",
+    "pluralName": "lines",
+    "displayName": "line",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "lin_ref": {
+      "type": "string"
+    },
+    "lin_name": {
+      "type": "string"
+    },
+    "lin_cover": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "feature": {
+      "type": "string"
+    },
+    "introduction": {
+      "type": "text"
+    },
+    "view": {
+      "type": "integer"
+    },
+    "price": {
+      "type": "integer"
+    },
+    "start_point": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::place.place"
+    },
+    "pass_point": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::place.place"
+    },
+    "end_point": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::place.place"
+    }
+  }
+}

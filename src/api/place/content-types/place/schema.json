@@ -1,0 +1,52 @@
+{
+  "kind": "collectionType",
+  "collectionName": "places",
+  "info": {
+    "singularName": "place",
+    "pluralName": "places",
+    "displayName": "place"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "pla_ref": {
+      "type": "string"
+    },
+    "pla_name": {
+      "type": "string"
+    },
+    "address": {
+      "type": "string"
+    },
+    "pla_cover": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "description": {
+      "type": "text"
+    },
+    "view": {
+      "type": "integer"
+    },
+    "duration": {
+      "type": "string"
+    },
+    "price": {
+      "type": "integer"
+    },
+    "region": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::region.region",
+      "inversedBy": "places"
+    }
+  }
+}

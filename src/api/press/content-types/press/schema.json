@@ -1,0 +1,47 @@
+{
+  "kind": "collectionType",
+  "collectionName": "presses",
+  "info": {
+    "singularName": "press",
+    "pluralName": "presses",
+    "displayName": "press",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "pre_cover": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "view": {
+      "type": "integer"
+    },
+    "content": {
+      "type": "text"
+    },
+    "sort": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::sort.sort",
+      "inversedBy": "presses"
+    },
+    "users_permissions_user": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user"
+    }
+  }
+}

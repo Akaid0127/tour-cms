@@ -1,0 +1,49 @@
+{
+  "kind": "collectionType",
+  "collectionName": "foods",
+  "info": {
+    "singularName": "food",
+    "pluralName": "foods",
+    "displayName": "food"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "foo_ref": {
+      "type": "string"
+    },
+    "foo_name": {
+      "type": "string"
+    },
+    "food_cover": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "introduction": {
+      "type": "text"
+    },
+    "price": {
+      "type": "integer"
+    },
+    "region": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::region.region",
+      "inversedBy": "foods"
+    },
+    "cate": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::cate.cate",
+      "inversedBy": "foods"
+    }
+  }
+}

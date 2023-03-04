@@ -1,0 +1,25 @@
+{
+  "kind": "collectionType",
+  "collectionName": "cates",
+  "info": {
+    "singularName": "cate",
+    "pluralName": "cates",
+    "displayName": "cate",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "cat_name": {
+      "type": "string"
+    },
+    "foods": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::food.food",
+      "mappedBy": "cate"
+    }
+  }
+}

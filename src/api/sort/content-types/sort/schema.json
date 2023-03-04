@@ -1,0 +1,25 @@
+{
+  "kind": "collectionType",
+  "collectionName": "sorts",
+  "info": {
+    "singularName": "sort",
+    "pluralName": "sorts",
+    "displayName": "sort",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "sor_name": {
+      "type": "string"
+    },
+    "presses": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::press.press",
+      "mappedBy": "sort"
+    }
+  }
+}
